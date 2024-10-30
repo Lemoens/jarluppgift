@@ -15,7 +15,9 @@
             padding: 0;
         }
 
-
+        h3{
+            min-width: 600px;
+        }
 
         input[type=text]{
             width: 100%;
@@ -50,7 +52,7 @@
 
 
         input[type=text]:hover{
-            padding: 20px;
+            padding: 15px;
             box-shadow: 0px 0px 5px rgb(0, 0, 0);
         }
     
@@ -105,6 +107,75 @@
             background-color: #ffffff;
             padding: 20px;
         }
+        
+        .dropdownandtelephone{
+            width:100%;
+            display: grid;
+            height:120px;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+        }
+
+        select{
+            width: 100%;
+            background-color: #ededed;
+            color: rgb(0, 0, 0);
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            box-shadow: 0px 0px 5px grey;
+        }
+
+        select:hover{
+            padding: 15px;
+            box-shadow: 0px 0px 5px rgb(0, 0, 0);
+        }
+
+
+        textarea[type=textarea]{
+
+            resize: vertical; 
+            width: 100%;
+            height:300px;
+            background-color: #ededed;
+            color: rgb(0, 0, 0);
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 0px 5px grey;
+            font-size: 3vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333333;
+        }
+
+
+        input[type=time]{
+            width: 100%;
+            background-color: #ededed;
+            color: rgb(0, 0, 0);
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            box-shadow: 0px 0px 5px grey;
+        }
+
+
+        .tidevenemang{
+            width:100%;
+            display: grid;
+            height:120px;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+        }
+
 
     </style>
 </head>
@@ -126,7 +197,46 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45829.289297951305!2d14.477691610354949!3d59.326123416702984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465c8a6a7832d8c5%3A0x7a77d738038dff7f!2sKarlskoga!5e0!3m2!1ssv!2sse!4v1728644095534!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
 
+        <div class="adress">
+            <label for="fadress">Adress:</label>
+            <input type="text" id="adress" name="adressinput" placeholder="Adressen för evenemanget.">
+            <div class="dropdownandtelephone">
+                <div class="omroden1">
+                    <label for="fområde">Område:</label>
+                    <select name="omrode" id="omroden">
+                        <option value="Aggerud">Aggerud</option>
+                        <option value="Häsängen">Häsängen</option>
+                        <option value="Landa">Landa</option>
+                        <option value="Odlingen">Odlingen</option>
+                        <option value="Rävåsen">Rävåsen</option>
+                        <option value="Sandmo">Sandmo</option>
+                        <option value="Skranta">Skranta</option>
+                    </select>
+                </div>
+                <div class="telefonnummergg">
+                    <label for="ftelefon">Telefonnummer:</label>
+                    <input type="text" id="telefonnum" name="telefonenummber" placeholder="Telefonnummer">
+                </div>
+            </div>
+        </div>
+            
+            <label for="l">Evenemang beskrivning:</label>
+            <textarea type="textarea" id="beskrivning" name="beskrivevenemanget" placeholder="Beskriv ditt evenemang!"></textarea>
+
+        <div class="tidevenemang">
+            <div class="tidbeggining">
+                <label for="appt">Evenemang börjar vid kl:</label>
+                <input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+            </div>
+            <div class="tidend">
+                <label for="appt">Evenemang slutar vid kl:</label>
+                <input type="time" id="appt" name="appt" min="09:00" max="18:00" required />    
+            </div>
+        </div>
+
         <input type="submit" value="Skicka in">
+
+
     </form>
 
 
